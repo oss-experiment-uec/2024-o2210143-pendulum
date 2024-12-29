@@ -59,13 +59,15 @@ DateTime(2024, 12, 29, 18, 42, 4, 125641, tzinfo=Timezone('Asia/Tokyo'))
 1. 入力例 `check_holiday()` を与えて実行する．
 
 ```
+>>> from src.pendulum.check_holiday import check_holiday
 check_holiday()
 ```
 
 を実行すると
 
 ```
-現在の日本時間: 2024-12-29T00:00:00+09:00
+>>> check_holiday()
+現在の日本時間: 2024-12-29 21:42:20.930029+09:00
 今日は祝日ではありません。
 次の祝日は 2025-01-01 (元日) です。
 ```
