@@ -1,15 +1,19 @@
+from __future__ import annotations
 import pendulum
 import jpholiday
+from datetime import date
+from datetime import datetime
+from datetime import timedelta
 
-def check_holiday_and_next():
+def check_holiday():
     # 現在の日本時間を取得
     now = pendulum.now('Asia/Tokyo')
     current_date = now.date()
-
+    
     # 今日が祝日かどうか
     is_holiday = jpholiday.is_holiday(current_date)
     holiday_name = jpholiday.is_holiday_name(current_date)
-
+    
     # 次の祝日を検索
     next_holiday = None
     for day in range(1, 365):  # 最大1年先まで検索
@@ -17,7 +21,7 @@ def check_holiday_and_next():
         if jpholiday.is_holiday(future_date):
             next_holiday = (future_date, jpholiday.is_holiday_name(future_date))
             break
-
+    
     # 結果を表示
     print(f"現在の日本時間: {now}")
     if is_holiday:
@@ -32,4 +36,4 @@ def check_holiday_and_next():
 
 # 実行
 if __name__ == "__main__":
-    check_holiday_and_next()
+    check_holiday()
