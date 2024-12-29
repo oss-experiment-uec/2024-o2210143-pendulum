@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 
 # Set the working directory in the container
 WORKDIR /app
+#COPY src/pendulum/holiday.py /app/holiday.py
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
