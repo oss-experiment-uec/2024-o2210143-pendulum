@@ -23,7 +23,7 @@ https://github.com/python-pendulum/pendulum
 
 ```
 docker pull o2210143/2024-o2210143-pendulum
-docker run -it 2024-o2210143-pendulum
+docker run -it o2210143/2024-o2210143-pendulum
 ```
 * 次にpendulumをimportする
 
