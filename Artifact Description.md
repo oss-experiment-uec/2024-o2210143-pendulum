@@ -30,7 +30,6 @@ docker run -it o2210143/2024-o2210143-pendulum
 
 ```
 >>> import pendulum
->>>
 ```
 
 * 簡単な動作確認をする。
@@ -60,7 +59,7 @@ DateTime(2024, 12, 29, 18, 42, 4, 125641, tzinfo=Timezone('Asia/Tokyo'))
 
 ```
 >>> from src.pendulum.check_holiday import check_holiday
-check_holiday()
+>>>check_holiday()
 ```
 
 を実行すると
@@ -81,6 +80,7 @@ check_holiday()
 
 * 今回は日本でのみ対応したが、海外の祝日なども表示できるようにしたい。
 * 日本語での祝日の表示をしたが、海外の人にも読めるように英語にも対応できるようにしたい。
+* from src.pendulum.check_holiday import check_holidayは本来入力せずにコード内に入れたかったが、複雑になるため、書いてもらっている。
 
 ## 更なる使い方（オプション）
 
